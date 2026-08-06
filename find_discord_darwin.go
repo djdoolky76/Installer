@@ -44,6 +44,10 @@ func ParseDiscord(p, branch string) *DiscordInstall {
 	}
 }
 
+func ParseDiscordNew(p, branch string, _ bool) *DiscordInstall {
+	return ParseDiscord(p, branch)
+}
+
 func FindDiscords() []any {
 	var discords []any
 	bases := []string{

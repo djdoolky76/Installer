@@ -13,8 +13,8 @@ import (
 
 const ReleaseUrl = "https://api.github.com/repos/djdoolky76/Vencord/releases/tags/devbuild"
 const ReleaseUrlFallback = "https://api.github.com/repos/djdoolky76/Vencord/releases/tags/devbuild"
-const InstallerReleaseUrl = ""
-const InstallerReleaseUrlFallback = ""
+const InstallerReleaseUrl = "https://api.github.com/repos/djdoolky76/Installer/releases/latest"
+const InstallerReleaseUrlFallback = "https://api.github.com/repos/djdoolky76/Installer/releases/latest"
 
 var UserAgent = "VencordInstaller/" + buildinfo.InstallerGitHash + " (https://github.com/djdoolky76/Installer)"
 

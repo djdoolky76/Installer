@@ -12,11 +12,13 @@ import (
 	"bytes"
 	_ "embed"
 	"errors"
-	g "github.com/AllenDang/giu"
-	"github.com/AllenDang/imgui-go"
 	"image"
 	"image/color"
 	"vencordinstaller/buildinfo"
+
+	g "github.com/AllenDang/giu"
+	"github.com/AllenDang/imgui-go"
+
 	// png decoder for icon
 	_ "image/png"
 	"os"
@@ -439,8 +441,8 @@ func renderInstaller() g.Widget {
 		g.Style().SetFontSize(20).To(
 			renderErrorCard(
 				DiscordYellow,
-				"**Github** and **vencord.dev** are the only official places to get Vencord. Any other site claiming to be us is malicious.\n"+
-					"If you downloaded from any other source, you should delete / uninstall everything immediately, run a malware scan and change your Discord password.",
+				"This is an unofficial custom Vencord Installer build. Only download it from **github.com/djdoolky76/Installer**.\n"+
+					"It installs the custom build published by **github.com/djdoolky76/Vencord**.",
 				90,
 			),
 		),
@@ -642,7 +644,7 @@ func loop() {
 			g.Dummy(0, 20),
 			g.Style().SetFontSize(20).To(
 				g.Row(
-					g.Label(Ternary(IsDevInstall, "Dev Install: ", "Files will be downloaded to: ")+FilesDir),
+					g.Label(Ternary(IsDevInstall, "Dev Install: ", "Vencord will be downloaded to: ")+FilesDir),
 					g.Style().
 						SetColor(g.StyleColorButton, DiscordBlue).
 						SetStyle(g.StyleVarFramePadding, 4, 4).

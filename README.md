@@ -1,12 +1,16 @@
-# Vencord Installer
+# Custom Vencord Installer
 
-The Vencord Installer allows you to install [Vencord, the cutest Discord Desktop client mod](https://github.com/Vendicated/Vencord)
+This fork of the Vencord Installer installs the custom [djdoolky76/Vencord](https://github.com/djdoolky76/Vencord) build, including CompleteDiscordQuest.
+
+The installer downloads the `devbuild` release at install or repair time. Every successful push to the custom Vencord repository therefore becomes available automatically; rebuilding this installer is not required for Vencord-only updates.
 
 ![image](https://user-images.githubusercontent.com/45497981/226734476-5fb42420-844d-4e27-ae06-4799118e086e.png)
 
 ## Usage
 
-See https://vencord.dev/download
+Download the appropriate executable from this repository's [latest release](https://github.com/djdoolky76/Installer/releases/latest).
+
+On Windows, use `VencordInstaller.exe` for the graphical installer or `VencordInstallerCli.exe` for the command-line installer.
 
 ## Building from source
 
@@ -63,4 +67,4 @@ go build --tags cli
 ```
 
 You might want to pass some flags to this command to get a better build.
-See [the GitHub workflow](https://github.com/Vendicated/VencordInstaller/blob/main/.github/workflows/release.yml) for what flags I pass or if you want more precise instructions
+See [the GitHub workflow](https://github.com/djdoolky76/Installer/blob/main/.github/workflows/release.yml) for the release build flags.

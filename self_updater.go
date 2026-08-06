@@ -46,7 +46,7 @@ func init() {
 }
 
 func GetInstallerDownloadLink() string {
-	const BaseUrl = "https://github.com/Loukious/Installer/releases/latest/download/"
+	const BaseUrl = "https://github.com/djdoolky76/Installer/releases/latest/download/"
 	switch runtime.GOOS {
 	case "windows":
 		filename := Ternary(buildinfo.UiType == buildinfo.UiTypeCli, "VencordInstallerCli.exe", "VencordInstaller.exe")
@@ -99,7 +99,7 @@ func UpdateSelf() error {
 		_ = os.Remove(tmp.Name())
 	}()
 	if err = tmp.Chmod(0o755); err != nil {
-		return fmt.Errorf("Failed to chmod 755", tmp.Name()+":", err)
+		return fmt.Errorf("failed to chmod %s to 755: %w", tmp.Name(), err)
 	}
 
 	if _, err = io.Copy(tmp, res.Body); err != nil {
